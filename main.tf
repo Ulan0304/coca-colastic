@@ -27,11 +27,11 @@ variable "subnet_b" {
   default = "10.0.2.0/24"
 }
 
+#################################################
+
 resource "aws_vpc" "tf-vpc-1" {
   cidr_block = var.vpc
 }
-
-#################################################
 
 resource "aws_subnet" "subnet_a" {
   vpc_id     = aws_vpc.tf-vpc-1.id
